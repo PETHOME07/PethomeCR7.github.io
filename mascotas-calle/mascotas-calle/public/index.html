@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Inicio de Sesión</title>
+<script src='app.js'></script>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background: linear-gradient(135deg, #4a90c2 0%, #6ba3d6 50%, #8bb8e0 100%);
+        margin: 0;
+        padding: 20px;
+        min-height: 100vh;
+        position: relative;
+        overflow-x: hidden;
+    }
+
+    /* Fondo decorativo con siluetas de mascotas */
+    body::before,
+    body::after,
+    .mascota-fondo-1,
+    .mascota-fondo-2,
+    .mascota-fondo-3 {
+        content: '';
+        position: absolute;
+        background: radial-gradient(ellipse, rgba(26, 58, 92, 0.12) 0%, transparent 70%);
+        border-radius: 50%;
+        pointer-events: none;
+    }
+
+    body::before {
+        width: 300px;
+        height: 300px;
+        top: 10%;
+        left: 5%;
+    }
+
+    body::after {
+        width: 250px;
+        height: 250px;
+        top: 60%;
+        right: 5%;
+    }
+
+    .mascota-fondo-1 {
+        width: 200px;
+        height: 200px;
+        top: 30%;
+        right: 15%;
+    }
+
+    .mascota-fondo-2 {
+        width: 220px;
+        height: 220px;
+        bottom: 10%;
+        left: 15%;
+    }
+
+    .mascota-fondo-3 {
+        width: 180px;
+        height: 180px;
+        top: 5%;
+        right: 40%;
+    }
+
+    .contenedor {
+        max-width: 800px;
+        margin: 0 auto;
+        background: rgba(26, 58, 92, 0.75);
+        border: 4px solid #ffffff;
+        border-radius: 20px;
+        padding: 40px;
+        box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+        text-align: center;
+        position: relative;
+        z-index: 1;
+    }
+
+    .contenedor label:first-of-type {
+        display: block;
+        font-size: 28px;
+        font-weight: bold;
+        color: #ffffff;
+        margin-bottom: 15px;
+        text-transform: uppercase;
+        text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+    }
+
+    .contenedor label:nth-of-type(2) {
+        display: block;
+        font-size: 16px;
+        color: #d0e4f5;
+        margin-bottom: 30px;
+        line-height: 1.6;
+    }
+
+    .imagen-mascotas {
+        width: 100%;
+        max-width: 700px;
+        border-radius: 15px;
+        margin: 20px auto;
+        display: block;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+        border: 3px solid #ffffff;
+    }
+
+    .botones-contenedor {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 20px;
+        margin-top: 20px;
+    }
+
+    .boton {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 220px;
+        height: 55px;
+        padding: 0 20px;
+        font-size: 16px;
+        font-weight: bold;
+        border: 3px solid #ffffff;
+        border-radius: 10px;
+        cursor: pointer;
+        transition: transform 0.2s, box-shadow 0.2s;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        color: white;
+        text-decoration: none;
+        box-sizing: border-box;
+        text-align: center;
+    }
+
+    .boton:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    }
+
+    .iniciar {
+        background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%);
+    }
+
+    .continuar {
+        background: linear-gradient(135deg, #5dade2 0%, #3498db 100%);
+    }
+</style>
+</head>
+<body>
+
+<div class="mascota-fondo-1"></div>
+<div class="mascota-fondo-2"></div>
+<div class="mascota-fondo-3"></div>
+
+<div class="contenedor">
+
+    <label>ENCUENTRA O REPORTA MASCOTAS PERDIDAS</label>
+
+    <label>Juntos podemos reunir a las familias con sus mascotas. Busca entre los reportes activos o publica el tuyo en segundos</label>
+
+    <img class="imagen-mascotas" src="https://p16-flow-image-sign.ibyteimg.com/tos-mya-i-3rsxbfecgb/rc_gen_image/e1b7b869c3a44c429314dcb44b36f1d7.jpeg~tplv-0es2k971ck-image.image?rcl=20260904044201FB5AF8F26C7F2FDE1BBE&rk3s=8e244e95&rrcfp=02a80fc2&x-expires=1791060145&x-signature=plAm5Fid8jokvyarg852AugbwYA%3D" alt="Mascotas felices juntas">
+
+    <div class="botones-contenedor">
+        <a href="registro.html" class="boton iniciar">
+            CREAR REPORTE
+        </a>
+
+        <a href="sector_de_mascotas.html" class="boton continuar">
+            MASCOTAS PERDIDAS
+        </a>
+    </div>
+
+</div>
+
+</body>
+</html>

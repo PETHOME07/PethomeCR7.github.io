@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mascotas Perdidas</title>
+    <script src="app.js"></script>
+    <style>
+        /* Estilos generales */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        body {
+            /* Fondo azul marino desvanecido */
+            background: linear-gradient(135deg, #001F3F 0%, #003366 50%, #004080 100%);
+            padding: 2rem;
+            min-height: 100vh;
+        }
+        /* Botón de regresar en esquina */
+.btn-regresar {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background: transparent;
+    color: #FFFFFF;
+    border: none;
+    font-size: 1.8rem;
+    padding: 0;               /* Quita espacio sobrante */
+    border-radius: 0;         /* Quita el contorno redondo */
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+    z-index: 10;              /* La flecha va encima pero no molesta */
+}
+.btn-regresar:hover {
+    background: transparent;
+    opacity: 0.7;             /* Efecto suave sin fondo */
+    transform: none;          /* No se agranda ni molesta */
+}
+/* Título principal centrado */
+h1 {
+    text-align: center;
+    color: #FFFFFF;
+    font-size: clamp(1.4rem, 6vw, 2.5rem);
+    margin: 40px auto 25px; /* ← Más margen arriba = baja un poco; margen inferior = separa del contenedor */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    padding: 0 1px 0 1px; /* ← Espacio a la izquierda para la flecha, más a la derecha */
+    white-space: nowrap;
+    width: 100%;
+}
+        /* Sección de mascotas - Cuadrícula */
+        .mascotas-seccion {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        /* Tarjeta de cada mascota */
+        .mascota-tarjeta {
+            background: #FFFFFF;
+            border-radius: 14px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0, 31, 63, 0.35);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .mascota-tarjeta:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0, 31, 63, 0.45);
+        }
+        /* Imagen de mascota */
+        .mascota-img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            background-color: #E6F2FF;
+        }
+        /* Información de la mascota */
+        .mascota-info {
+            padding: 1.2rem;
+        }
+        .mascota-nombre {
+            font-size: 1.3rem;
+            color: #001F3F;
+            margin-bottom: 1rem;
+            font-weight: 700;
+            text-align: center;
+        }
+        /* Iconos y datos */
+        .mascota-datos {
+            display: flex;
+            flex-direction: column;
+            gap: 0.6rem;
+            margin-bottom: 1.3rem;
+        }
+        .dato-fila {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: #33475B;
+            font-size: 0.95rem;
+        }
+        .icono {
+            width: 20px;
+            height: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #0066CC;
+            font-weight: bold;
+            font-size: 1.1rem;
+        }
+        /* Resultado de búsqueda */
+        .sin-resultados {
+            text-align: center;
+            color: #FFFFFF;
+            font-size: 1.1rem;
+            grid-column: 1 / -1;
+            padding: 2.5rem;
+            background-color: rgba(255, 255, 255, 0.15);
+            border-radius: 12px;
+        }
+    </style>
+</head>
+<body>
+   
+    <!-- Título Principal -->
+    <h1 style="text-align: center;">🐾MASCOTAS PERDIDAS🐾</h1>
+     <!-- Flecha de regresar en la esquina -->
+    <button class="btn-regresar" onclick="window.location.href='index.html'">↩️</button>
+    <!-- Sección de Mascotas -->
+    <div class="mascotas-seccion" id="contenedor-mascotas">
+        <!-- Aquí se cargan las tarjetas desde app.js -->
+    </div>
+    <script>
+        listaDePublicidades();
+    </script>
+</body>
+</html>
